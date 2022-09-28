@@ -1,8 +1,13 @@
 """List of prime numbers generator."""
 
 def primes(number_of_primes):
+
     if number_of_primes < 1:
         raise ValueError(f"{number_of_primes} should be greater than 0")
+
+    if not isinstance(number_of_primes,int):
+        raise TypeError(f"{number_of_primes} should be an integer")
+
     list = [2]
     num = 2
     while len(list) < number_of_primes:
